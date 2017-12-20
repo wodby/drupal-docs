@@ -1,0 +1,44 @@
+site_name: Drupal 8 stack documentation
+site_url: https://cloud.wodby.com/stackhub/ada51e9b-2204-45ee-8e49-a4151912a168/overview
+repo_url: https://github.com/wodby/stacks
+site_description: Drupal 8 stack documentation
+site_author: Wodby Inc
+copyright: Wodby Inc
+
+# output directory:
+site_dir: ../build/docs/4.4
+docs_dir: "4.4"
+
+theme: readthedocs
+theme_dir: theme
+markdown_extensions:
+  - markdown_include.include
+  - admonition
+  - def_list
+  - footnotes
+extra_css: []
+extra_javascript: []
+extra:
+    version: 4.4
+pages:
+    - Overview: index.md
+    - Deployment: deployment.md
+    - Drupal settings: drupal-settings.md
+    - Import: import.md
+    - Instance types: instance-types.md
+    - Local environment: local-environment.md
+    - Mail delivery: mail-delivery.md
+    - Containers:
+      - Apache: containers/apache.md
+      - Blackfire: containers/blackfire.md
+      - Cron: containers/cron.md
+      - Nginx: containers/nginx.md
+      - Node.js: containers/nodejs.md
+      - MariaDB: containers/mariadb.md
+      - PHP: containers/php.md
+      - Rsyslog: containers/rsyslog.md
+      - Redis: containers/redis.md
+      - Solr: containers/solr.md
+      - SSH: containers/ssh.md
+      - Varnish: containers/varnish.md
+      - Webgrind: containers/webgrind.md
