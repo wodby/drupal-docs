@@ -1,6 +1,6 @@
 # Varnish
 
-You can configure Redis via environment variables that listed at https://github.com/wodby/varnish. 
+You can configure Redis via environment variables that listed at https://github.com/wodby/drupal-varnish. 
 
 Varnish ignores the following GET parameters for cache id generation:
 

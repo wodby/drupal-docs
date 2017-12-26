@@ -1,6 +1,6 @@
 # Nginx
 
-You can configure Nginx via environment variables that listed at https://github.com/wodby/nginx
+You can configure Nginx via environment variables that listed at https://github.com/wodby/drupal-nginx
 
 ## PHP endpoints
 
