@@ -1,7 +1,7 @@
 site_name: Drupal stack documentation
 site_description: Drupal stack documentation
 site_author: Wodby, Inc.
-site_url: https://wodby.com/stacks/drupal8/docs
+site_url: https://wodby.com/stacks/drupal/docs
 
 repo_name: wodby/drupal-docs
 repo_url: https://github.com/wodby/drupal-docs
