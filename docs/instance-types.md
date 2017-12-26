@@ -1,5 +1,7 @@
 # Instance types
 
+See https://docs.wodby.com/apps/instances.html to learn more about instances.
+
 ## Dev
 
 Health checks disabled for all containers except database server

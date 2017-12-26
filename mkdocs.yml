@@ -60,9 +60,12 @@ pages:
     - Backups: backups.md
     - Cache control: cache-control.md
     - Deployment: deployment.md
+    - Domains: domains.md
     - Drupal settings: drupal-settings.md
+    - Going live: going-live.md
     - Import: import.md
     - Instance types: instance-types.md
+    - Logs: logs.md
     - Mail delivery: mail-delivery.md
     - Multi site: multi-site.md
     - Containers:

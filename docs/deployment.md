@@ -24,3 +24,11 @@ We recommend using [Composer](https://getcomposer.org/) to manage dependencies i
 ## Deployment from CI tool
 
 TBA
+
+## Post-deployment scripts
+
+You can perform some actions such as run a drush command after deployment by using [post-deployment scripts](https://docs.wodby.com/deployment/post-deployment-scripts.html)
+
+## Auto deployment via git hooks
+
+See https://docs.wodby.com/deployment/auto-deploy.html

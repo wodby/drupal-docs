@@ -1,5 +1,7 @@
 # Containers 
 
+## Overview
+
 The Drupal stack consist of the following containers:
 
 | Container    | Versions           | Image                              |
@@ -24,6 +26,10 @@ The Drupal stack consist of the following containers:
 
 !!! note "SSHD and Cron":
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Cron] services.
+
+## Configuration
+
+Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://docs.wodby.com/stacks/configuration.html  
 
 [Apache]: apache.md
 [AthenaPDF]: athenapdf.md

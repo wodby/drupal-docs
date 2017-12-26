@@ -36,7 +36,7 @@ In addition to [global environment variables](https://docs.wodby.com/infrastruct
 | `$WODBY_HOSTS`        | `[ "example.com", "dev.example.org", "dev.example.org.wod.by" ]` |
 
 !!! warning "WARNING": 
-    Some environment variables used by PHP may be overriden in [`wodby.settings.php`](#settings-php) file
+    Some environment variables used by PHP may be overriden in [`wodby.settings.php`](../drupal-settings.md) file
 
 Deprecated variables:
 
@@ -46,6 +46,9 @@ Deprecated variables:
 | `$WODBY_APP_DOCROOT` | `$HTTP_ROOT`      |
 | `$WODBY_CONF`        | `$WODBY_DIR_CONF` |
 | `$WODBY_APP_SUBSITE` | `$DRUPAL_SITE`    |
+
+!!! info "Variables availability": 
+    Environment variables provided by Wodby are always available in PHP even if `PHP_FPM_CLEAR_ENV` set to `no`. 
 
 ## XDebug
 
