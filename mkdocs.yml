@@ -63,6 +63,7 @@ pages:
     - Import: import.md
     - Instance types: instance-types.md
     - Mail delivery: mail-delivery.md
+    - Multi site: multi-site.md
     - Containers:
       - Overview: containers/index.md
       - Apache: containers/apache.md
