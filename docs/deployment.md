@@ -2,7 +2,7 @@
 
 ## Vanilla Drupal (no deployment)
 
-For demo purposes and simple Drupal installations you can use Vanilla Drupal deployment option when Drupal code comes within Docker image. In case of changes all data made to your codebase will persist but there will be no versions control.
+For demo purposes and simple Drupal installations you can use Vanilla Drupal deployment option. In this case Drupal code that comes with the Docker image will be used. In case of changes all data made to your codebase will persist but there will be no versions control.
 
 ## Deployment with git
 

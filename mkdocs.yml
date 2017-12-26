@@ -58,6 +58,7 @@ markdown_extensions:
 pages:
     - Home: index.md
     - Backups: backups.md
+    - Cache control: cache-control.md
     - Deployment: deployment.md
     - Drupal settings: drupal-settings.md
     - Import: import.md
