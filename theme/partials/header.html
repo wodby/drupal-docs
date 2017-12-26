@@ -1,0 +1,52 @@
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo">
+          {% if config.theme.logo.icon %}
+            <i class="md-icon">{{ config.theme.logo.icon }}</i>
+          {% else %}
+            <img src="{{ base_url }}/{{ config.theme.logo }}" width="24" height="24">
+          {% endif %}
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          {% block site_name %}
+            {% if config.site_name == page.title %}
+              {{ config.site_name }}
+            {% else %}
+              <span class="md-header-nav__topic">
+                {{ config.site_name }}
+
+                {% if config.extra.stack_url %}
+                <span class="stack-page-link-wrapper">
+                  Go to stack page:
+                  <a href="https://cloud.wodby.com/stackhub/ada51e9b-2204-45ee-8e49-a4151912a168/overview" class="stack-page-link" target="_blank">Drupal 8</a> |
+                  <a href="https://cloud.wodby.com/stackhub/35e3e058-936b-4695-9871-08c855aae898/overview" class="stack-page-link" target="_blank">Drupal 7</a> |
+                  <a href="https://cloud.wodby.com/stackhub/0ade1c32-7b75-41ad-b796-4de97fb7dc4e/overview" class="stack-page-link" target="_blank">Drupal 6</a>
+                </span>
+                {% endif %}
+              </span>
+              <span class="md-header-nav__topic">
+                {{ page.title }}
+              </span>
+            {% endif %}
+          {% endblock %}
+        </div>
+      </div>
+
+      <div class="md-flex__cell md-flex__cell--shrink">
+        {% block search_box %}
+          {% if "search" in config["plugins"] %}
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            {% include "partials/search.html" %}
+          {% endif %}
+        {% endblock %}
+      </div>
+    </div>
+  </nav>
+</header>

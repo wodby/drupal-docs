@@ -1,23 +1,9 @@
-# Wodby stacks documentation
+# Drupal stacks documentation
+
+[![wercker status](https://app.wercker.com/status/b429374b8a5172c7a347792ca00bfeec/s/master "wercker status")](https://app.wercker.com/project/byKey/b429374b8a5172c7a347792ca00bfeec)
+[![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
+[![Wodby Twitter](https://img.shields.io/twitter/follow/wodbyhq.svg?style=social&label=Follow)](https://twitter.com/wodbyhq)
 
 Docs are built using [mkdocs](http://www.mkdocs.org)
 
-Look at `build.sh` script to see how it works.
-
-## To Publish New Version
-
-* Update `build.sh`
-* Update `index.html` to redirect to the latest version automatically.
-* Create a new YAML file, like `5.5.1.yaml` if you are releasing version 5.5.1
-
-## Running Locally
-
-```bash
-$ ./serve.sh
-```
-
-To run a specific version of the docs:
-
-```bash
-$ mkdocs serve --config-file 1.3.yaml
-```
+See https://wodby.com/stacks/drupal/docs
