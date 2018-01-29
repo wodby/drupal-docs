@@ -17,8 +17,8 @@ We recommend using [Composer](https://getcomposer.org/) to manage dependencies i
       command: composer install --no-interaction --optimize-autoloader
       directory: $APP_ROOT
   ```
-3. On the 2nd step of new application deployment form:
-    * Enter `web` in `Codebase dir` 
+3. On the 3rd step of new application deployment form:
+    * Specify `web` in `Codebase dir` (default name of subdir with Drupal's codebase) 
     * Make sure git branch matches to your Drupal version
 
 ## Deployment from CI tool
