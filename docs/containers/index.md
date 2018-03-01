@@ -4,33 +4,36 @@
 
 The Drupal stack consist of the following containers:
 
-| Container    | Versions           | Image                              |
-| ------------ | ------------------ | ---------------------------------- |
-| [Nginx]      | 1.13, 1.12         | [wodby/drupal-nginx]               |
-| [Apache]     | 2.4                | [wodby/php-apache]                 |
-| [PHP]        | 7.1, 7.0, 5.6, 5.3 | [wodby/drupal-php]                 |
-| [MariaDB]    | 10.2, 10.1         | [wodby/mariadb]                    |
-| [Redis]      | 4.0, 3.2           | [wodby/redis]                      |
-| [Memcached]  | 1.4                | [wodby/memcached]                  |
-| [Varnish]    | 4.1                | [wodby/drupal-varnish]             |
-| [Solr]       | 7.x, 6.x, 5.5, 5.4 | [wodby/drupal-solr]                |
-| [Node.js]    | 1.0                | [wodby/drupal-node]                |
-| [OpenSMTPD]  | 6.0                | [wodby/opensmtpd]                  |
-| [Webgrind]   | 1.5                | [wodby/webgrind]                   |
-| [Blackfire]  | latest             | [blackfire/blackfire]              |
-| [Rsyslog]    | latest             | [wodby/rsyslog]                    |
-| [AthenaPDF]  | 2.10.0             | [arachnysdocker/athenapdf-service] |
-| Mailhog      | latest             | [mailhog/mailhog]                  |
-| Adminer      | 4.3                | [wodby/adminer]                    |
-| phpMyAdmin   | latest             | [phpmyadmin/phpmyadmin]            |
+| Container    | Versions           | [Resources]      | Image                              |
+| ------------ | ------------------ | ---------------- | ---------------------------------- |
+| [Nginx]      | 1.13, 1.12         | 4m               | [wodby/drupal-nginx]               |
+| [Apache]     | 2.4                | 4m               | [wodby/php-apache]                 |
+| [PHP-FPM]    | 7.1, 7.0, 5.6, 5.3 | 32m              | [wodby/drupal-php]                 |
+| [SSHD]       | 7.1, 7.0, 5.6, 5.3 | 4m               | [wodby/drupal-php]                 |
+| [Crond]      | 7.1, 7.0, 5.6, 5.3 | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
+| [MariaDB]    | 10.2, 10.1         | 64m              | [wodby/mariadb]                    |
+| [Redis]      | 4.0, 3.2           | 4m               | [wodby/redis]                      |
+| [Memcached]  | 1.4                | 4m               | [wodby/memcached]                  |
+| [Varnish]    | 4.1                | 8m               | [wodby/drupal-varnish]             |
+| [Solr]       | 7.x, 6.x, 5.5, 5.4 | 256m             | [wodby/drupal-solr]                |
+| [Node.js]    | 1.0                | 32m              | [wodby/drupal-node]                |
+| [OpenSMTPD]  | 6.0                | 4m               | [wodby/opensmtpd]                  |
+| [Webgrind]   | 1.5                | 16m              | [wodby/webgrind]                   |
+| [Blackfire]  | latest             | 4m               | [blackfire/blackfire]              |
+| [Rsyslog]    | latest             | 4m               | [wodby/rsyslog]                    |
+| [AthenaPDF]  | 2.10.0             | 16m              | [arachnysdocker/athenapdf-service] |
+| Mailhog      | latest             | 4m               | [mailhog/mailhog]                  |
+| Adminer      | 4.3                | 8m               | [wodby/adminer]                    |
+| phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
 !!! note "SSHD and Cron":
-    For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Cron] services.
+    For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP-FPM service will be automatically passed to [SSHD] and [Crond] services.
 
 ## Configuration
 
 Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://docs.wodby.com/stacks/configuration.html  
 
+[Resources request]: https://docs.wodby.com/stacks/configuration.html#resources
 [Apache]: apache.md
 [AthenaPDF]: athenapdf.md
 [Blackfire]: blackfire.md
@@ -49,7 +52,7 @@ Every container provides a set of environment variables for its customization. Y
 [Webgrind]: webgrind.md
 
 [SSHD]: ssh.md
-[Cron]: cron.md
+[Crond]: cron.md
 
 [wodby/drupal-nginx]: https://github.com/wodby/drupal-nginx
 [wodby/php-apache]: https://github.com/wodby/php-apache
