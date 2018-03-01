@@ -4,7 +4,7 @@
 
 The Drupal stack consist of the following containers:
 
-| Container    | Versions           | [Resources]*     | Image                              |
+| Container    | Versions           | [Resources]      | Image                              |
 | ------------ | ------------------ | ---------------- | ---------------------------------- |
 | [Nginx]      | 1.13, 1.12         | 4m               | [wodby/drupal-nginx]               |
 | [Apache]     | 2.4                | 4m               | [wodby/php-apache]                 |
@@ -29,7 +29,7 @@ The Drupal stack consist of the following containers:
 !!! note "SSHD and Crond":
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP-FPM service will be automatically passed to [SSHD] and [Crond] services.
 
-!!! note "*Resources"
+!!! note "Resources"
     `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. Default values specified.
 
 ## Configuration
@@ -37,6 +37,7 @@ The Drupal stack consist of the following containers:
 Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://docs.wodby.com/stacks/configuration.html  
 
 [Resources]: https://docs.wodby.com/stacks/configuration.html#resources
+
 [Apache]: apache.md
 [AthenaPDF]: athenapdf.md
 [Blackfire]: blackfire.md
