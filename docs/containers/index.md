@@ -9,8 +9,8 @@ The Drupal stack consist of the following containers:
 | [Nginx]      | 1.13, 1.12         | 4m               | [wodby/drupal-nginx]               |
 | [Apache]     | 2.4                | 4m               | [wodby/php-apache]                 |
 | [PHP-FPM]    | 7.1, 7.0, 5.6, 5.3 | 32m              | [wodby/drupal-php]                 |
-| [SSHD]       | 7.1, 7.0, 5.6, 5.3 | 4m               | [wodby/drupal-php]                 |
-| [Crond]      | 7.1, 7.0, 5.6, 5.3 | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
+| [SSHD]       | -//-               | 4m               | [wodby/drupal-php]                 |
+| [Crond]      | -//-               | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
 | [MariaDB]    | 10.2, 10.1         | 64m              | [wodby/mariadb]                    |
 | [Redis]      | 4.0, 3.2           | 4m               | [wodby/redis]                      |
 | [Memcached]  | 1.4                | 4m               | [wodby/memcached]                  |
@@ -26,10 +26,11 @@ The Drupal stack consist of the following containers:
 | Adminer      | 4.3                | 8m               | [wodby/adminer]                    |
 | phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
-!!! note "SSHD and Cron":
+!!! note "SSHD and Crond":
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP-FPM service will be automatically passed to [SSHD] and [Crond] services.
 
-*Resources: `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. Default values specified.
+!!! note "*Resources"
+    `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. Default values specified.
 
 ## Configuration
 
@@ -45,7 +46,7 @@ Every container provides a set of environment variables for its customization. Y
 [Nginx]: nginx.md
 [Node.js]: nodejs.md
 [OpenSMTPD]: opensmtpd.md
-[PHP]: php.md
+[PHP-FPM]: php.md
 [PostgreSQL]: postgres.md
 [Redis]: redis.md
 [Rsyslog]: rsyslog.md
