@@ -4,7 +4,7 @@ You can configure PHP via environment variables that listed at https://github.co
 
 ## Composer
 
-Composer package `hirak/prestissimo:^0.3` installed globally for www-data user to download dependencies in parallel.
+Composer package `hirak/prestissimo:^0.3` installed globally for wodby user to download dependencies in parallel.
 
 ## Drush
 
@@ -28,7 +28,7 @@ In addition to [global environment variables](https://docs.wodby.com/infrastruct
 | --------------------- | ---------------------------------------------------------------- |
 | `$APP_ROOT`           | `/var/www/html` by default                                       |
 | `$HTTP_ROOT`          | e.g. `/var/www/html/web`                                         |
-| `$WODBY_DIR_CONF`     | `/var/www/conf` by default                                       |
+| `$CONF_DIR`           | `/var/www/conf` by default                                       |
 | `$DRUPAL_SITE`        | Drupal site directory, e.g. `default`                            |
 | `$WODBY_APP_NAME`     | My app                                                           |
 | `$WODBY_HOST_PRIMARY` | example.com                                                      |
@@ -40,12 +40,13 @@ In addition to [global environment variables](https://docs.wodby.com/infrastruct
 
 Deprecated variables:
 
-| Variable             | Instead use       |
-| -------------------- | ----------------- |
-| `$WODBY_APP_ROOT`    | `$APP_ROOT`       |
-| `$WODBY_APP_DOCROOT` | `$HTTP_ROOT`      |
-| `$WODBY_CONF`        | `$WODBY_DIR_CONF` |
-| `$WODBY_APP_SUBSITE` | `$DRUPAL_SITE`    |
+| Variable             | Instead use    |
+| -------------------- | -------------- |
+| `$WODBY_APP_ROOT`    | `$APP_ROOT`    |
+| `$WODBY_APP_DOCROOT` | `$HTTP_ROOT`   |
+| `$WODBY_CONF`        | `$CONF_DIR`    |
+| `$WODBY_DIR_CONF`    | `$CONF_DIR`    |
+| `$WODBY_APP_SUBSITE` | `$DRUPAL_SITE` |
 
 !!! info "Variables availability": 
     Environment variables provided by Wodby are always available in PHP even if `PHP_FPM_CLEAR_ENV` set to `no`. 
