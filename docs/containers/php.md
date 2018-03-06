@@ -95,6 +95,12 @@ if (isset($_SERVER['WODBY_ENVIRONMENT_TYPE']) && $_SERVER['WODBY_ENVIRONMENT_TYP
 
 Redirect from HTTP to HTTPS can be enabled on a domain edit page from the dashboard.
 
+## PHPUnit
+
+1. Inside your drupal/core directory, copy the file `phpunit.xml.dist` and rename it to `phpunit.xml`
+2. Open that file and make sure that you update `SIMPLETEST_BASE_URL` to `http://nginx`
+3. In order to make sure that your DB connection is working as well, update `SIMPLETEST_DB` to `mysql://drupal:drupal@mariadb/drupal`
+
 ## NewRelic APM monitoring
 
 You can add NewRelic APM monitoring for PHP by adding environment variables `PHP_NEWRELIC_ENABLED=1` and `PHP_NEWRELIC_LICENSE` with your license number to PHP-FPM container. Application name will be automatically set to `[Wodby Application Name] - [Wodby Instance Name]`, if you want to change it, use `PHP_NEWRELIC_APPNAME`. 
