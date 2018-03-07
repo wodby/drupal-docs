@@ -1,8 +1,8 @@
-box: wodby/alpine:3.6-1.2.0
+box: wodby/alpine:3.7-1.2.0
 
 build:
   box:
-    id: python:2-alpine
+    id: python:2-alpine3.7
     cmd: /bin/sh
   steps:
     - script:
