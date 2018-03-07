@@ -16,7 +16,7 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 
 ## Option 2: Mount my Drupal Codebase
 
-1. Download `docker-compose.yml`, `.env` and (optionally) `docker.mk` files from the [latest stable release](https://github.com/wodby/docker4drupal/releases) to your Drupal project root
+1. Download `docker4drupal.tar.gz` from the [latest stable release](https://github.com/wodby/docker4drupal/releases) and unpack to your Drupal project root
 2. Optional: for Drupal 7 or 6 comment out corresponding `PHP_TAG` and `NGINX_TAG` in your `.env` file
 3. Optional: rename `docker.mk` to `Makefile` or include it in your existing Makefile, see available [make commands](make-commands.md) 
 4. Ensure `NGINX_SERVER_ROOT` (or `APACHE_SERVER_ROOT`) is correct, by default set to `/var/www/html/web` for composer-based projects where Drupal is in `web` subdirectory
