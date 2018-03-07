@@ -11,4 +11,5 @@ Commands:
     down    Same as stop
     prune   Stop and remove containers, networks, images, and volumes (docker-compose down)
     ps      List container for the current project (docker ps with filter by name)
+    shell   Enter PHP container as default user (docker exec -ti $CID sh)
 ```
