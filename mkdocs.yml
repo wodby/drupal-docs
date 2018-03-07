@@ -92,8 +92,9 @@ pages:
       - Overview: local/index.md
       - Quick start: local/quick-start.md
       - Domains: local/domains.md
-      - Docker for mac: local/docker-for-mac.md
+      - For macOS users: local/docker-for-mac.md
       - Import and export: local/import-export.md
+      - Make commands: local/make-commands.md
       - Multiple projects: local/multiple-projects.md
       - Permissions issues: local/permissions.md
       - Xdebug: local/xdebug.md
