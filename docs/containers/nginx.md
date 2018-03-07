@@ -28,3 +28,7 @@ If the default drupal config and available environment variables are not enough 
 1. Copy `/etc/nginx/conf.d/drupal.conf` to your codebase, adjust to your needs
 2. Deploy code with your config file
 3. Add new environment variable `NGINX_CONF_INCLUDE` for nginx service, the value should the path to your *.conf file (e.g. `/var/www/html/nginx.conf`
+
+## Files proxy
+
+You can proxy all requests to files to (similar to what drupal module stage_file_proxy does) by adding the environment variable `NGINX_DRUPAL_FILE_PROXY_URL` to URL of your Drupal instance with files, e.g. `http://example.com` 
