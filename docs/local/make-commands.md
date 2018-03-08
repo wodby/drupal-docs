@@ -1,6 +1,6 @@
 # Make commands
 
-We provide [`Makefile`](https://github.com/wodby/docker4drupal/blob/5.x/docker.mk) file that contains commands to simplify the work with your local environment. You can run `make [COMMAND]` to execute the following commands:
+We provide [`Makefile`](https://github.com/wodby/docker4drupal/blob/master/docker.mk) file that contains commands to simplify the work with your local environment. You can run `make [COMMAND]` to execute the following commands:
 
 ```
 Usage: make COMMAND

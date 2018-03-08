@@ -18,5 +18,3 @@ Add `127.0.0.1 drupal.docker.localhost` to your `/etc/hosts` file (some browsers
 | varnish      | `http://varnish.${BASE_URL}:8000`   |
 | portainer    | `http://portainer.${BASE_URL}:8000` |
 | webgrind     | `http://webgrind.${BASE_URL}:8000`  |
-
-You can modify domains under labels definition, e.g. `traefik.frontend.rule=Host:mailhog.drupal.docker.localhost`.
