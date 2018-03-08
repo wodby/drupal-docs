@@ -20,9 +20,9 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 2. Optional: for Drupal 7 or 6 comment out corresponding `PHP_TAG` and `NGINX_TAG` in your `.env` file
 3. Ensure `NGINX_SERVER_ROOT` (or `APACHE_SERVER_ROOT`) is correct, by default set to `/var/www/html/web` for composer-based projects where Drupal is in `web` subdirectory
 4. Ensure database credentials match in your `settings.php` as in `.env` file 
-5. Optional: [import existing database](import-export.md)
-6. Optional: uncomment lines in the compose file to run [redis](../containers/redis.md), [solr](../containers/solr.md), etc
-7. [Configure domains](domains.md)
+5. [Configure domains](domains.md)
+6. Optional: [import existing database](import-export.md)
+7. Optional: uncomment lines in the compose file to run [redis](../containers/redis.md), [solr](../containers/solr.md), [varnish](../containers/varnish.md), etc
 8. Optional: macOS users please read [this](docker-for-mac.md)
 9. Optional: Windows users please read [this](permissions.md#windows)
 10. Run containers: `docker-compose up -d` or `make up` (see all [make commands](make-commands.md))
@@ -32,12 +32,6 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 You can stop containers by executing `docker-compose stop` or `make stop`
 
 Have a problem? See [known issues](known-issues.md), submit a new issue on [GitHub](https://github.com/wodby/docker4drupal/issues) or ask [community on Slack](http://slack.wodby.com)
-
-!!! tip "Permissions issues":
-    To avoid potential problems with permissions between your host and containers please follow [these instructions](permissions.md)
-
-!!! info "For macOS users":
-    Docker for Mac volumes has poor performance. However there are workarounds, read more [here](docker-for-mac.md)
 
 Feel free to adjust volumes and ports in the compose file for your convenience. 
 
