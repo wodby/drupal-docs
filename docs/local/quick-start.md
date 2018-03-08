@@ -10,7 +10,7 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 1. Clone [docker4drupal repository](https://github.com/wodby/docker4drupal) and switch to the [latest stable tag](https://github.com/wodby/docker4drupal/releases) or download/unpack the source code from the [latest release](https://github.com/wodby/docker4drupal/releases)
 2. Optional: for Drupal 7 or 6 comment out corresponding `DRUPAL_TAG` and `NGINX_TAG` in `.env` file
 4. [Configure domains](domains.md)
-3. From project root directory run `docker-compose up -d` or `make up` to start containers 
+3. From project root directory run `docker-compose up -d` or `make up` to start containers. Give it 10-20 seconds to initialize after the start
 5. That's it! Proceed with Drupal installation at http://drupal.docker.localhost:8000. Default database user, password and database name are all `drupal`, database host is `mariadb`
 6. You can see status of your containers and their logs via portainer: http://portainer.drupal.docker.localhost:8000
 
