@@ -30,11 +30,10 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 12. You can see status of your containers and their logs via portainer: http://portainer.drupal.docker.localhost:8000
 
 !!! info "Optional files":
-    If you don't need to [run multiple projects](multiple-projects.md) and don't use [docker-sync to improve volumes performance on macOS] feel free to delete `traefik.yml` and `docker-sync.yml` that come with the `docker4drupa.tar.gz`
+    If you don't need to [run multiple projects](multiple-projects.md) and don't use [docker-sync to improve volumes performance on macOS](docker-for-mac.md) feel free to delete `traefik.yml` and `docker-sync.yml` that come with the `docker4drupa.tar.gz`
 
 You can stop containers by executing `docker-compose stop` or `make stop`
 
 Have a problem? See [known issues](known-issues.md), submit a new issue on [GitHub](https://github.com/wodby/docker4drupal/issues) or ask [community on Slack](http://slack.wodby.com)
 
 Feel free to adjust volumes and ports in the compose file for your convenience. 
-
