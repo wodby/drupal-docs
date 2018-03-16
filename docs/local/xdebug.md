@@ -11,7 +11,7 @@
 3. Start debugging in IDE
 4. Start your browser debug helper plugin ([Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) or [Firefox](https://addons.mozilla.org/en-us/firefox/addon/the-easiest-xdebug)) and open the page you want to debug. Alternatively, enable auto start by adding `PHP_XDEBUG_REMOTE_AUTOSTART=1`
 
-## Debugging CLI requests
+## Debugging CLI requests 
 
 1. Enable Xdebug as described in the previous section
 2. Uncomment the following environment variables for PHP service in your composer file
@@ -22,11 +22,11 @@
 3. Perform configuration as described below depending on your OS
 4. Configure your IDE as described below
 
-##### Linux
+### Linux
 
 Uncomment `PHP_XDEBUG_REMOTE_HOST: 172.17.0.1` for PHP service
 
-##### macOS
+### macOS
 
 1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 10.254.254.254` for PHP service (just a random IP that very likely won't be used by anything else).
 2. You also need to have loopback alias with IP from above. You need this only once and that settings stays active until logout or restart:
@@ -54,14 +54,14 @@ Uncomment `PHP_XDEBUG_REMOTE_HOST: 172.17.0.1` for PHP service
     </plist>
     ```
 
-##### Windows
+### Windows
 
 1. Uncomment `PHP_XDEBUG_REMOTE_HOST: 10.0.75.1` for PHP service (default IP of Docker NAT). 
 2. Allow listen connection for your IDE in `Windows Firewall > Allow an app ..`
 
 ### IDE configuration for CLI debugging
 
-### PhpStorm
+#### PhpStorm
 
 1. Open `Run > Edit Configurations` from the main menu, choose `Defaults > PHP Web Page` in the left sidebar
 2. Click to `[...]` to the right of `Server` and add a new server
