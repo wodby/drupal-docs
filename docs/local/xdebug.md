@@ -72,4 +72,4 @@
     * Enter any host, it does not matter
     * Check `Use path mappings`, select path to your project and enter `/var/www/html` in the right column (Absolute path on the server) 
 3. Choose newly created server in "Server" for PHP Web Page
-4. Save settings and start debugging
+4. Save settings
