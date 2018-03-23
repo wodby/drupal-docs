@@ -16,7 +16,7 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 
 ## Option 2: Mount my Drupal Codebase
 
-1. Download `docker4drupal.tar.gz` from the [latest stable release](https://github.com/wodby/docker4drupal/releases) and unpack to your Drupal project root. If you clone the repository make sure you've deleted `docker-compose.override.yml` as it's used to deploy vanilla Drupal
+1. Download `docker4drupal.tar.gz` from the [latest stable release](https://github.com/wodby/docker4drupal/releases) and unpack to your Drupal project root. If you choose to clone [the repository](https://github.com/wodby/docker4drupal) delete `docker-compose.override.yml` as it's used to deploy vanilla Drupal
 2. Ensure `NGINX_SERVER_ROOT` (or `APACHE_SERVER_ROOT`) is correct, by default set to `/var/www/html/web` for composer-based projects where Drupal is in `web` subdirectory
 3. Ensure database credentials match in your `settings.php` as in `.env` file 
 4. [Configure domains](domains.md)
