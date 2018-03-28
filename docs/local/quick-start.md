@@ -18,7 +18,19 @@ There are 2 options how to use docker4drupal – you can either run [vanilla](ht
 
 1. Download `docker4drupal.tar.gz` from the [latest stable release](https://github.com/wodby/docker4drupal/releases) and unpack to your Drupal project root. If you choose to clone [the repository](https://github.com/wodby/docker4drupal) delete `docker-compose.override.yml` as it's used to deploy vanilla Drupal
 2. Ensure `NGINX_SERVER_ROOT` (or `APACHE_SERVER_ROOT`) is correct, by default set to `/var/www/html/web` for composer-based projects where Drupal is in `web` subdirectory
-3. Ensure database credentials match in your `settings.php` as in `.env` file 
+3. Ensure database access settings in your `settings.php` corresponds to values in `.env` file, e.g.:
+    ```php
+    $databases['default']['default'] = array (
+      'database' => 'drupal', // same as $DB_NAME
+      'username' => 'drupal', // same as $DB_USER
+      'password' => 'drupal', // same as $DB_PASSWORD
+      'host' => 'mariadb', // same as $DB_HOST
+      'driver' => 'mysql', 	// same as $DB_DRIVER
+      'port' => '3306',	// different for PostgreSQL
+      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql', // different for PostgreSQL
+      'prefix' => '',
+    );
+    ```     
 4. [Configure domains](domains.md)
 5. Optional: for Drupal 7 or 6 comment out corresponding `PHP_TAG` and `NGINX_TAG` in your `.env` file
 6. Optional: [import existing database](import-export.md)
