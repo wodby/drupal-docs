@@ -35,7 +35,7 @@ In addition to [global environment variables](https://docs.wodby.com/infrastruct
 | `$WODBY_URL_PRIMARY`  | http://example.com                                               |
 | `$WODBY_HOSTS`        | `[ "example.com", "dev.example.org", "dev.example.org.wod.by" ]` |
 
-!!! warning "WARNING": 
+!!! warning "WARNING" 
     Some environment variables used by PHP may be overriden in [`wodby.settings.php`](../drupal-settings.md) file
 
 Deprecated variables:
@@ -48,7 +48,7 @@ Deprecated variables:
 | `$WODBY_DIR_CONF`    | `$CONF_DIR`    |
 | `$WODBY_APP_SUBSITE` | `$DRUPAL_SITE` |
 
-!!! info "Variables availability": 
+!!! info "Variables availability" 
     Environment variables provided by Wodby are always available in PHP even if `PHP_FPM_CLEAR_ENV` set to `no`. 
 
 ## XDebug
@@ -61,7 +61,7 @@ Follow these steps to debug your application instance remotely with [xdebug](htt
 4. Start debugging in IDE
 5. Start your browser debug helper plugin ([Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) or [Firefox](https://addons.mozilla.org/en-us/firefox/addon/the-easiest-xdebug)) and open the page you want to debug
 
-!!! info "Debugging locally": 
+!!! info "Debugging locally" 
     To learn how to use xdebug locally see [this article](../local/xdebug.md) 
 
 ## Redirects
