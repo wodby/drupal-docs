@@ -13,6 +13,6 @@ monolog.handler.rsyslog:
 ```
 3. Rebuild cache (`drush cr`)
 4. Use `rsyslog` handler for your channels
-5. Find your logs in [rsyslog container output](https://docs.wodby.com/apps/logs.html)
+5. Find your logs in [rsyslog container output](https://help.wodby.com/apps/logging)
 
 Read [Logging in Drupal 8](https://www.wellnet.it/en/blog/logging-drupal-8) to learn more.

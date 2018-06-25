@@ -1,6 +1,6 @@
 # Backups
 
-This stack provides backup and restore actions for files (e.g. `sites/*/files`) and database. Learn more about backups from our [documentation](https://docs.wodby.com/apps/backups.html).
+This stack provides backup and restore actions for files (e.g. `sites/*/files`) and database. Learn more about backups from our [documentation](https://help.wodby.com/apps/application-backups).
 
 ## Database backups
 

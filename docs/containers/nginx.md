@@ -31,4 +31,8 @@ If the default drupal config and available environment variables are not enough 
 
 ## Files proxy
 
-You can proxy all requests to files to (similar to what drupal module stage_file_proxy does) by adding the environment variable `NGINX_DRUPAL_FILE_PROXY_URL` to URL of your Drupal instance with files, e.g. `http://example.com` 
+You can proxy all requests to files to (similar to what drupal module stage_file_proxy does) by adding the environment variable `NGINX_DRUPAL_FILE_PROXY_URL` to URL of your Drupal instance with files, e.g. `http://example.com`
+
+## Mod pagespeed
+
+Nginx comes with [mod_pagespeed](https://www.modpagespeed.com/) which is disabled by default. To enable it add `NGINX_PAGESPEED=on` environment variable to Nginx service. 

@@ -6,6 +6,10 @@ You can configure PHP via environment variables that listed at https://github.co
 
 Composer package `hirak/prestissimo:^0.3` installed globally for wodby user to download dependencies in parallel.
 
+## Installed PHP extensions
+
+See https://github.com/wodby/php#php-extensions
+
 ## Drush
 
 PHP container comes with pre-installed drush and drush launcher. Drush launcher will help you use drush that comes with your project without specifying the full path to it. 
@@ -22,7 +26,7 @@ PHP container comes with installed drupal console launcher (not the same as drup
 
 ## Environment variables
 
-In addition to [global environment variables](https://docs.wodby.com/infrastructure/environment-variables.html), we provide the following variables in PHP container that you can use in your post-deployment scripts:
+In addition to [global environment variables](https://help.wodby.com/infrastructure/environment-variables), we provide the following variables in PHP container that you can use in your post-deployment scripts:
 
 | Variable              | Description                                                      |
 | --------------------- | ---------------------------------------------------------------- |
@@ -36,7 +40,7 @@ In addition to [global environment variables](https://docs.wodby.com/infrastruct
 | `$WODBY_HOSTS`        | `[ "example.com", "dev.example.org", "dev.example.org.wod.by" ]` |
 
 !!! warning "WARNING" 
-    Some environment variables used by PHP may be overriden in [`wodby.settings.php`](../drupal-settings.md) file
+    Some environment variables used by PHP may be overridden in [`wodby.settings.php`](../drupal-settings.md) file
 
 Deprecated variables:
 
@@ -108,3 +112,7 @@ Redirect from HTTP to HTTPS can be enabled on a domain edit page from the dashbo
 ## NewRelic APM monitoring
 
 You can add NewRelic APM monitoring for PHP by adding environment variables `PHP_NEWRELIC_ENABLED=1` and `PHP_NEWRELIC_LICENSE` with your license number to PHP-FPM container. Application name will be automatically set to `[Wodby Application Name] - [Wodby Instance Name]`, if you want to change it, use `PHP_NEWRELIC_APPNAME`. 
+
+## Profiling
+
+You can profile your PHP application either via Xdebug traces (+[Webgrind](webgrind.md)) or Tideways XHProf extensions.

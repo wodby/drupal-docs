@@ -4,6 +4,6 @@ All domains attached to an HTTP server (Nginx or Apache) or Varnish will be adde
 
 For more details please see Wodby documentation:
 
-* [Domains management](https://docs.wodby.com/apps/domains.html)
-* [SSL](https://docs.wodby.com/apps/ssl.html)
-* [HSTS](https://docs.wodby.com/infrastructure/hsts.html)
+* [Domains management](https://help.wodby.com/apps/domains)
+* [SSL](https://help.wodby.com/apps/ssl)
+* [HSTS](https://help.wodby.com/infrastructure/hsts)

@@ -6,12 +6,13 @@ The Drupal stack consist of the following containers:
 
 | Container    | Versions           | Resources        | Image                              |
 | ------------ | ------------------ | ---------------- | ---------------------------------- |
-| [Nginx]      | 1.13, 1.12         | 4m               | [wodby/drupal-nginx]               |
+| [Nginx]      | 1.15, 1.14, 1.13   | 4m               | [wodby/drupal-nginx]               |
 | [Apache]     | 2.4                | 4m               | [wodby/php-apache]                 |
-| [PHP-FPM]    | 7.1, 7.0, 5.6, 5.3 | 32m              | [wodby/drupal-php]                 |
+| [PHP-FPM]    | 7.x, 5.6, 5.3      | 32m              | [wodby/drupal-php]                 |
 | [SSHD]       | -//-               | 4m               | [wodby/drupal-php]                 |
 | [Crond]      | -//-               | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
-| [MariaDB]    | 10.2, 10.1         | 64m              | [wodby/mariadb]                    |
+| [MariaDB]    | 10.3, 10.2, 10.1   | 64m              | [wodby/mariadb]                    |
+| [PostgreSQL] | 10, 9.x            | 64m              | [wodby/postgres]                   |
 | [Redis]      | 4.0, 3.2           | 4m               | [wodby/redis]                      |
 | [Memcached]  | 1.4                | 4m               | [wodby/memcached]                  |
 | [Varnish]    | 4.1                | 8m               | [wodby/drupal-varnish]             |
@@ -27,14 +28,14 @@ The Drupal stack consist of the following containers:
 | phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
 !!! note "Resources"
-    Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://docs.wodby.com/stacks/configuration.html#resources
+    Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://help.wodby.com/stacks/stack-configuration#resources
 
 !!! note "SSHD and Crond"
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP-FPM service will be automatically passed to [SSHD] and [Crond] services.
 
 ## Configuration
 
-Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://docs.wodby.com/stacks/configuration.html  
+Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. https://help.wodby.com/stacks/stack-configuration
 
 [Apache]: apache.md
 [AthenaPDF]: athenapdf.md
