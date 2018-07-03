@@ -4,28 +4,29 @@
 
 The Drupal stack consist of the following containers:
 
-| Container    | Versions           | Resources        | Image                              |
-| ------------ | ------------------ | ---------------- | ---------------------------------- |
-| [Nginx]      | 1.15, 1.14, 1.13   | 4m               | [wodby/drupal-nginx]               |
-| [Apache]     | 2.4                | 4m               | [wodby/php-apache]                 |
-| [PHP-FPM]    | 7.x, 5.6, 5.3      | 32m              | [wodby/drupal-php]                 |
-| [SSHD]       | -//-               | 4m               | [wodby/drupal-php]                 |
-| [Crond]      | -//-               | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
-| [MariaDB]    | 10.3, 10.2, 10.1   | 64m              | [wodby/mariadb]                    |
-| [PostgreSQL] | 10, 9.x            | 64m              | [wodby/postgres]                   |
-| [Redis]      | 4.0, 3.2           | 4m               | [wodby/redis]                      |
-| [Memcached]  | 1.4                | 4m               | [wodby/memcached]                  |
-| [Varnish]    | 4.1                | 8m               | [wodby/drupal-varnish]             |
-| [Solr]       | 7.x, 6.x, 5.5, 5.4 | 256m             | [wodby/drupal-solr]                |
-| [Node.js]    | 1.0                | 32m              | [wodby/drupal-node]                |
-| [OpenSMTPD]  | 6.0                | 4m               | [wodby/opensmtpd]                  |
-| [Webgrind]   | 1.5                | 16m              | [wodby/webgrind]                   |
-| [Blackfire]  | latest             | 4m               | [blackfire/blackfire]              |
-| [Rsyslog]    | latest             | 4m               | [wodby/rsyslog]                    |
-| [AthenaPDF]  | 2.10.0             | 16m              | [arachnysdocker/athenapdf-service] |
-| Mailhog      | latest             | 4m               | [mailhog/mailhog]                  |
-| Adminer      | 4.3                | 8m               | [wodby/adminer]                    |
-| phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
+| Container     | Versions           | Resources        | Image                              |
+| ------------- | ------------------ | ---------------- | ---------------------------------- |
+| [Nginx]       | 1.15, 1.14, 1.13   | 4m               | [wodby/drupal-nginx]               |
+| [Apache]      | 2.4                | 4m               | [wodby/php-apache]                 |
+| [PHP-FPM]     | 7.x, 5.6, 5.3      | 32m              | [wodby/drupal-php]                 |
+| [SSHD]        | -//-               | 4m               | [wodby/drupal-php]                 |
+| [Crond]       | -//-               | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
+| [MariaDB]     | 10.3, 10.2, 10.1   | 64m              | [wodby/mariadb]                    |
+| [PostgreSQL]  | 10, 9.x            | 64m              | [wodby/postgres]                   |
+| [Node]        | 9.x, 8.x           |                  | [wodby/node]                       |
+| [Drupal node] | 1.0                | 32m              | [wodby/drupal-node]                |
+| [Redis]       | 4.0, 3.2           | 4m               | [wodby/redis]                      |
+| [Memcached]   | 1.5                | 4m               | [wodby/memcached]                  |
+| [Varnish]     | 4.1                | 8m               | [wodby/drupal-varnish]             |
+| [Solr]        | 7.x, 6.x, 5.5, 5.4 | 256m             | [wodby/drupal-solr]                |
+| [OpenSMTPD]   | 6.0                | 4m               | [wodby/opensmtpd]                  |
+| [Webgrind]    | 1.5                | 16m              | [wodby/webgrind]                   |
+| [Blackfire]   | latest             | 4m               | [blackfire/blackfire]              |
+| [Rsyslog]     | latest             | 4m               | [wodby/rsyslog]                    |
+| [AthenaPDF]   | 2.10.0             | 16m              | [arachnysdocker/athenapdf-service] |
+| [Mailhog]     | latest             | 4m               | [mailhog/mailhog]                  |
+| Adminer       | 4.3                | 8m               | [wodby/adminer]                    |
+| phpMyAdmin    | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
 !!! note "Resources"
     Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://help.wodby.com/stacks/configuration#resources
@@ -44,7 +45,8 @@ Every container provides a set of environment variables for its customization. Y
 [MariaDB]: mariadb.md
 [Memcached]: memcached.md
 [Nginx]: nginx.md
-[Node.js]: nodejs.md
+[Drupal node]: drupal-node.md
+[Node]: node.md
 [OpenSMTPD]: opensmtpd.md
 [PHP-FPM]: php.md
 [PostgreSQL]: postgres.md
@@ -67,6 +69,7 @@ Every container provides a set of environment variables for its customization. Y
 [wodby/drupal-varnish]: https://github.com/wodby/drupal-varnish
 [wodby/drupal-solr]: https://github.com/wodby/drupal-solr
 [wodby/drupal-node]: https://github.com/wodby/drupal-node
+[wodby/node]: https://github.com/wodby/node
 [wodby/opensmtpd]: https://github.com/wodby/opensmtpd
 [wodby/memcached]: https://github.com/wodby/memcached
 [wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
