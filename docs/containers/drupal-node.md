@@ -1,4 +1,4 @@
-# Drupal Node
+# Drupal Node.js
 
 Drupal node is a container with a server app for the [Node.js Integration Drupal module](https://www.drupal.org/project/nodejs). Do not confuse with just [Node](node.md)
 
