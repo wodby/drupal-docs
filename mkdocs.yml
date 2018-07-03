@@ -76,7 +76,7 @@ pages:
       - Mailhog: containers/mailhog.md
       - MariaDB: containers/mariadb.md
       - Memcached: containers/memcached.md
-      - Node: containers/node.md
+      - Node.js: containers/node.md
       - Drupal node: containers/drupal-node.md
       - OpenSMTPD: containers/opensmtpd.md
       - PHP: containers/php.md

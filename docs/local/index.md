@@ -13,13 +13,13 @@ The Drupal stack consist of the following containers:
 | [Nginx]       | 1.15, 1.14, 1.13        | `nginx`         | [wodby/drupal-nginx]               |
 | [Apache]      | 2.4                     | `apache`        | [wodby/php-apache]                 |
 | [Drupal]      | 8, 7, 6                 | `php`           | [wodby/drupal]                     |
-| [PHP-FPM]     | 7.x, 5.6, 5.3           | `php`           | [wodby/drupal-php]                 |
+| [PHP]         | 7.x, 5.6, 5.3           | `php`           | [wodby/drupal-php]                 |
 | [MariaDB]     | 10.3, 10.2, 10.1        | `mariadb`       | [wodby/mariadb]                    |
 | [PostgreSQL]  | 10, 9.x                 | `postgres`      | [wodby/postgres]                   |
 | [Redis]       | 4.0, 3.2                | `redis`         | [wodby/redis]                      |
 | [Varnish]     | 4.1                     | `varnish`       | [wodby/drupal-varnish]             |
-| [Node]        | 9, 8                    | `node`          | [wodby/node]                       |
-| [Drupal node] | 1.0                     | `nodejs`        | [wodby/drupal-node]                |
+| [Node.js]     | 9.11, 8.11, 6.14        | `node`          | [wodby/node]                       |
+| [Drupal node] | 1.0                     | `drupal-node`   | [wodby/drupal-node]                |
 | [Solr]        | 7.x, 6.x, 5.5, 5.4      | `solr`          | [wodby/drupal-solr]                |
 | Elasticsearch | 6.x, 5.6, 5.5, 5.4      | `elasticsearch` | [wodby/elasticsearch]              |
 | Kibana        | 6.x, 5.6, 5.5, 5.4      | `kibana`        | [wodby/kibana]                     |
@@ -46,9 +46,9 @@ Supported Drupal versions: 8 / 7 / 6
 [MariaDB]: ../containers/mariadb.md
 [Memcached]: ../containers/memcached.md
 [Nginx]: ../containers/nginx.md
-[Node]: ../containers/node.md
+[Node.js]: ../containers/node.md
 [OpenSMTPD]: ../containers/opensmtpd.md
-[PHP-FPM]: ../containers/php.md
+[PHP]: ../containers/php.md
 [PostgreSQL]: ../containers/postgres.md
 [Redis]: ../containers/redis.md
 [Rsyslog]: ../containers/rsyslog.md
