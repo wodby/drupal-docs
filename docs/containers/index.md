@@ -9,7 +9,7 @@ The Drupal stack consist of the following containers:
 | [Apache]      | 2.4                | 4m               | [wodby/php-apache]                 |
 | [AthenaPDF]   | 2.10.0             | 16m              | [arachnysdocker/athenapdf-service] |
 | [Blackfire]   | latest             | 4m               | [blackfire/blackfire]              |
-| [Crond]       | -//-               | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
+| [Crond]       | -                  | 4m, 0.1; 512m, 1 | [wodby/drupal-php]                 |
 | [Drupal node] | 1.0                | 32m              | [wodby/drupal-node]                |
 | [Mailhog]     | latest             | 4m               | [mailhog/mailhog]                  |
 | [MariaDB]     | 10.3, 10.2, 10.1   | 64m              | [wodby/mariadb]                    |
@@ -21,11 +21,11 @@ The Drupal stack consist of the following containers:
 | [PostgreSQL]  | 10, 9.x            | 64m              | [wodby/postgres]                   |
 | [Redis]       | 4.0, 3.2           | 4m               | [wodby/redis]                      |
 | [Rsyslog]     | latest             | 4m               | [wodby/rsyslog]                    |
-| [Solr]        | 7.x, 6.x, 5.5, 5.4 | 256m             | [wodby/drupal-solr]                |
-| [SSHD]        | -//-               | 4m               | [wodby/drupal-php]                 |
+| [Solr]        | 7.x, 6.6, 5.5, 5.4 | 256m             | [wodby/drupal-solr]                |
+| [SSHD]        | -                  | 4m               | [wodby/drupal-php]                 |
 | [Varnish]     | 4.1                | 8m               | [wodby/drupal-varnish]             |
 | [Webgrind]    | 1.5                | 16m              | [wodby/webgrind]                   |
-| Adminer       | 4.3                | 8m               | [wodby/adminer]                    |
+| Adminer       | 4.6                | 8m               | [wodby/adminer]                    |
 | phpMyAdmin    | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
 !!! note "Resources"
